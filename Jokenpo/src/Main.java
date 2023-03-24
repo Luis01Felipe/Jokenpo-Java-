@@ -12,7 +12,7 @@ public class Main {
 
         do {
             do {
-                System.out.println("Escolha entre: \n1. Pedra, 2. Papel, 3. Tesoura");
+                System.out.println("\nEscolha entre: \n1. Pedra, 2. Papel, 3. Tesoura");
 
                 while (!pC.hasNextInt()) {
                     System.out.println("Formato invalido, por favor tente novamente.");
@@ -55,16 +55,15 @@ public class Main {
             }
 
             if (computerChoice == 1 && playerChoice == 2 || computerChoice == 2 && playerChoice == 3 || computerChoice == 3 && playerChoice == 1) {
-                System.out.println("Jogador ganhou");
+                System.out.println("--Jogador ganhou--");
                 playerScore+=1;
             } else {
-                //if (computerChoice == 2 && playerChoice == 1 || computerChoice == 3 && playerChoice == 2 || computerChoice == 1 && playerChoice == 3) {
-                System.out.println("Computador ganhou");
+                System.out.println("--Computador ganhou--");
                 computerScore+=1;
             }
         }while(playerScore < 3 && computerScore < 3);
 
-        System.out.println("\n[Jogador]: "+playerScore+"\n[Computador]: "+computerScore);
+        System.out.printf("\nPontuação Final: \n[Jogador: %d] \n[Computador: %d]", playerScore, computerScore);
 
         pC.close();
     }
